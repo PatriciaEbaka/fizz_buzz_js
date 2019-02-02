@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puppeteer Mocha Scaffold</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="container mx-auto">
+
+    <div class="w-full max-w-xs">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div class="mb-4">
+            <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+              Enter Number
+            </label>
+            <input 
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            type="text" id="value">
+
+          </div>
+          <div class="mb-4">
+                <input type="submit" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" value="Check" id="button">
+            </div>
+          <div class="mb-6">
+            <div id="display_answer"></div>
+          </div>
+
+        </form>
+      </div>
+      
+
+<script src="src/js/fizz-buzz.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let button = document.getElementById('button')
+            let displayDiv = document.getElementById('display_answer')
+            button.addEventListener('click', (e) =>{
+                e.preventDefault()
+                let value = document.getElementById('value').value
+                let fizzBuzz = new FizzBuzz
+                let result = fizzBuzz.check(value)
+                displayDiv.innerHTML = result;
+            })
+        })
+    </script>
+ 
+</body>
+</html>
