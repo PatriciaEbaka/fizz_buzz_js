@@ -12,3 +12,6 @@ Question 2:
      It is outside the context of the the `it` block so that 
      the fizzBuzz instance is accessible to within the whole 
      expect block
+
+Question 3. In your README to the best of your knowledge please explain the difference between using === and == in JS?
+    
